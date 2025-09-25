@@ -1,0 +1,36 @@
+# language-specific settings
+
+[[language]]
+name = "c"
+file-types = ["c"]
+scope = "source.c"
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "cpp"
+file-types = ["cpp", "cc", "cxx"]
+scope = "source.cpp"
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "rust"
+file-types = ["rs"]
+scope = "source.rust"
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "asm"
+file-types = ["asm", "s"]
+scope = "source.asm"
+indent = { tab-width = 8, unit = "\t" }
+
+[[language]]
+name = "javascript"
+file-types = ["js", "jsx", "ts", "tsx"]
+scope = "source.js"
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
