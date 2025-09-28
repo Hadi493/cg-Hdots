@@ -13,5 +13,6 @@ config.set("content.blocking.method", "both")
 config.set("colors.webpage.darkmode.enabled", False, "https://chatgpt.com/*")
 
 config.set("colors.webpage.darkmode.enabled", False, "https://chatgpt.com/*")
+config.set("colors.webpage.darkmode.enabled", False, "https://www.youtube.com/*")
 config.set("colors.webpage.darkmode.enabled", False, "https://github.com/*")
 config.set("colors.webpage.darkmode.enabled", False, "https://discord.com/*")
