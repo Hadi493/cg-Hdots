@@ -12,6 +12,7 @@ config.set("content.blocking.method", "both")
 # Disable dark mode for specific websites
 config.set("colors.webpage.darkmode.enabled", False, "https://chatgpt.com/*")
 
+config.set("colors.webpage.darkmode.enabled", False, "https://x.com/*")
 config.set("colors.webpage.darkmode.enabled", False, "https://chatgpt.com/*")
 config.set("colors.webpage.darkmode.enabled", False, "https://www.youtube.com/*")
 config.set("colors.webpage.darkmode.enabled", False, "https://github.com/*")
