@@ -21,6 +21,30 @@ config.bind('eu','spawn --userscript qute-pass --username-only')
 config.bind('ep','spawn --userscript qute-pass --password-only')
 config.bind('eo','spawn --userscript qute-pass --otp-only')
 
+
+# Enable automatic webpage dark mode where possible to give consistent dark design.
+c.colors.webpage.darkmode.enabled = True
+
+
+EXEMPT = [
+    "https://*.youtube.com/*",
+    "https://youtube.com/*",
+    "https://*.x.com/*",
+    "https://x.com/*",
+    "https://*.github.com/*",
+    "https://github.com/*",
+    "https://*.linkedin.com/*",
+    "https://linkedin.com/*",
+    "https://*.chat.openai.com/*",
+    "https://chat.openai.com/*",
+    "https://*.chatgpt.com/*",
+    "https://chatgpt.com/*",
+]
+
+for site in EXEMPT:
+    config.set("colors.webpage.darkmode.enabled", False, site)
+
+
 c.tabs.position = 'left'
 
 # # Hide the tab bar
@@ -87,8 +111,3 @@ c.url.searchengines = {"DEFAULT": "https://search.realnephestate.xyz/search?q={}
         "yt": "https://www.youtube.com/results?search_query={}"}
 
 c.window.title_format = '{perc}{current_title}{title_sep}nephestate browser'
-
-
-
-# deps
-# sudo pacman -S python-adblock                                                                                                                                                              
