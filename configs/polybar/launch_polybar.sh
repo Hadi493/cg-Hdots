@@ -1,0 +1,1 @@
+/home/cg/cg-i3dotfiles/config/polybar/launch_polybar.sh

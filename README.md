@@ -9,6 +9,7 @@
 - .vimrc
 - rofi
 - waybar
+- polybar
 - kitty
 - qutebrowser
 - fish-shell
