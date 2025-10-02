@@ -11,6 +11,7 @@
 - rofi
 - waybar
 - polybar
+- i3lock
 - kitty
 - qutebrowser
 - fish-shell
