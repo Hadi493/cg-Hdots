@@ -1,8 +1,12 @@
 #!/bin/bash
 
-WALLPAPER_DIR="$HOME/Pictures/wallpapers/collection-2/"
+# WALLPAPER_DIR="$HOME/Pictures/wallpapers/fake-beauti-collections"
 
-# WALLPAPER_DIR="$HOME/Pictures/wallpapers/nature-collections/"
+# WALLPAPER_DIR="$HOME/Pictures/wallpapers/collectionH"
+
+# WALLPAPER_DIR="$HOME/Pictures/wallpapers/fighters"
+ 
+WALLPAPER_DIR="$HOME/Pictures/wallpapers/nature-collections/"
 
 # WALLPAPER_DIR="$HOME/Pictures/wallpapers/cg-wallpapers/"
 
@@ -18,8 +22,8 @@ WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n1)
 # Set wallpaper with transition
 swww img "$WALLPAPER" \
   --transition-type any \
-  --transition-fps 30 \
-  --transition-duration 1
+  --transition-fps 70 \
+  --transition-duration 0.66
 
 # TOOLS:
 # - sudo pacman -S swww
