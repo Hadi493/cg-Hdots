@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Usage: ./new_ada_project.sh ProjectName
+# Example: ./new_ada_project.sh ada_learn
+
+PROJECT=$1
+
+if [ -z "$PROJECT" ]; then
+    echo "Usage: $0 ProjectName"
+    exit 1
+fi
+
+# Create folder structure
+mkdir -p $PROJECT/{src,tests,docs,build}
+
+# Create main program
+cat << EOF > $PROJECT/src/main.adb
+with Ada.Text_IO;
+
+procedure Main is
+begin
+   Ada.Text_IO.Put_Line("Hello from $PROJECT!");
+end Main;
+EOF
+
+# Create example package
+cat << EOF > $PROJECT/src/utils_pkg.ads
+package Utils_Pkg is
+   procedure Say_Hello(Name : in String);
+end Utils_Pkg;
+EOF
+
+cat << EOF > $PROJECT/src/utils_pkg.adb
+with Ada.Text_IO;
+
+package body Utils_Pkg is
+   procedure Say_Hello(Name : in String) is
+   begin
+      Ada.Text_IO.Put_Line("Hello, " & Name & "!");
+   end Say_Hello;
+end Utils_Pkg;
+EOF
+
+# Create GNAT project file
+cat << EOF > $PROJECT/$PROJECT.gpr
+project $PROJECT is
+   for Source_Dirs use ("src");
+   for Object_Dir use "build";
+   for Exec_Dir   use "build";
+   for Main use ("src/main.adb");
+end $PROJECT;
+EOF
+
+# Create Makefile
+cat << 'EOF' > $PROJECT/Makefile
+BINARY = build/main
+SRC = src/main.adb
+
+# Ensure build dir exists
+$(BINARY): $(SRC)
+	mkdir -p build
+	gnatmake $(SRC) -o $(BINARY)
+
+run: $(BINARY)
+	./$(BINARY)
+
+build: $(BINARY)
+
+clean:
+	rm -rf build
+    
+EOF
+
+echo "✅ Ada project '$PROJECT' created with Makefile!"
