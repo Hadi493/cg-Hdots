@@ -1,22 +1,24 @@
 * {
+    margin: 0;
+    padding: 0;
     background-color: #2E3440;
     text-color:       #ECEFF4;
-    font:             "sans-serif 10";
+    font:             "Iosevka 10";
 }
 
 window {
-    width: 90%; /* Use percentage for better scaling */
-    height: 80%;
+    width: 80%; /* Use percentage for better scaling */
+    height: 59%;
     border: 0px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 0px;
     location: center; /* Center the window */
     anchor: center;
 }
 
 mainbox {
     children: [ inputbar, listview ];
-    spacing: 15px;
+    spacing: 18px;
 }
 
 inputbar {
@@ -24,7 +26,7 @@ inputbar {
     spacing: 10px;
     padding: 8px;
     background-color: #3B4252; /* Slightly lighter background */
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 prompt {
@@ -36,7 +38,7 @@ entry {
 }
 
 listview {
-    columns: 4; /* Grid layout */
+    columns: 5; /* Grid layout */
     spacing: 20px; /* Increased spacing for better visual separation */
     cycle: true;
     dynamic: true;
@@ -46,28 +48,28 @@ listview {
 
 element {
     orientation: vertical;
-    padding: 10px;
-    border: 2px;
+    padding: 9px;
+    border: 1px;
     border-color: #4C566A; /* Border for elements */
-    border-radius: 8px;
+    border-radius: 0px;
     background-color: #3B4252; /* Match inputbar background */
 }
 
 element-icon {
-    size: 150px; /* Large icons */
+    size: 195px; /* Large icons */
     border: 0px;
 }
 
 element-text {
     horizontal-align: 0.5;
     text-color:       inherit;
-    margin: 8px 0px 0px 0px;
-    font: "sans-serif 8"; /* Smaller font for text */
+    margin:           8px 0px 0px 0px;
+    font:             "Iosevka 8"; /* Smaller font for text */
 }
 
 element selected {
     background-color: #4C566A; /* Medium blue-grey for selected background */
     text-color:       #ECEFF4;
-    border: 2px;
+    border:           1px;
     border-color:     #88C0D0; /* Accent color for selected border */
 }
