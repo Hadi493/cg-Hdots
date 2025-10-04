@@ -15,6 +15,7 @@
 - kitty
 - qutebrowser
 - fish-shell
+- Mako
 
 
 > ***Fell free to use and contribute***
