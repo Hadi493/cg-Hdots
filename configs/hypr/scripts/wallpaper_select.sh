@@ -9,10 +9,18 @@ if [ ! -d "$WALLPAPER_DIR" ]; then
     exit 1
 fi
 
-# Select a wallpaper using rofi
-selected_wallpaper=$(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) | rofi -dmenu -p "Select Wallpaper")
+# Rofi theme file
+ROFI_THEME="$HOME/.config/hypr/rofi/wallpaper.rasi"
 
-# If a wallpaper is selected, set it as the background
-if [ -n "$selected_wallpaper" ]; then
-    swww img "$selected_wallpaper"
-fi
+# Find all wallpapers and pipe them to rofi
+# Output format: full_path\0icon\x1ffull_path\n
+find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -print0 | \
+    while IFS= read -r -d $'\0' wallpaper; do
+        echo -e "$wallpaper\0icon\x1f$wallpaper"
+    done | \
+    rofi -dmenu -p "Select Wallpaper" -theme "$ROFI_THEME" -show-icons | \
+    while read -r selected_wallpaper_path; do
+        if [ -n "$selected_wallpaper_path" ]; then
+            swww img "$selected_wallpaper_path"
+        fi
+    done
