@@ -10,7 +10,7 @@ border-color=#89b4fae6
 border-radius=0
 icons=0
 max-icon-size=64
-default-timeout=10000
+default-timeout=10
 ignore-timeout=0
 
 [urgency=low]
@@ -24,8 +24,8 @@ text-color=#cdd6f4
 [urgency=high]
 border-color=#f38ba8e6
 text-color=#cdd6f4
-default-timeout=0
+default-timeout=10
 
 [category=mpd]
-default-timeout=2000
+default-timeout=20
 group-by=category
