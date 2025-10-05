@@ -14,7 +14,7 @@ ROFI_THEME="$HOME/.config/hypr/rofi/wallpaper.rasi"
 
 # Find all wallpapers and pipe them to rofi
 # Output format: full_path\0icon\x1ffull_path\n
-find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" \) -print0 | \
+find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.webp" \) -print0 | \
     while IFS= read -r -d $'\0' wallpaper; do
         echo -e "$wallpaper\0icon\x1f$wallpaper"
     done | \

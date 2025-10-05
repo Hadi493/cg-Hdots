@@ -38,7 +38,7 @@ entry {
 }
 
 listview {
-    columns: 5; /* Grid layout */
+    columns: 4; /* Grid layout */
     spacing: 20px; /* Increased spacing for better visual separation */
     cycle: true;
     dynamic: true;
