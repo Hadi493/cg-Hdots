@@ -1,10 +1,10 @@
 [global]
     monitor = 0
     follow = mouse
-    width = 300
-    height = 300
+    width = 400
+    height = 400
     origin = top-right
-    offset = 10x50
+    offset = 50x50
     scale = 0
     notification_limit = 0
     progress_bar = true
@@ -14,12 +14,12 @@
     progress_bar_max_width = 300
     indicate_hidden = yes
     shrink = no
-    separator_height = 1
+    separator_height = 0
     padding = 8
     horizontal_padding = 10
     text_icon_padding = 0
-    font = Iosevka Nerd 10
-    line_height = 0
+    font = Iosevka Nerd 15
+    line_height = 1
     markup = full
     format = "<b>%s</b>
 %b"
@@ -30,7 +30,7 @@
     ellipsize = middle
     ignore_newline = no
     stack_duplicates = true
-    hide_duplicate_count = false
+    hide_duplicate_count = true
     show_indicators = yes
     icon_position = left
     max_icon_size = 32
@@ -50,7 +50,7 @@
     mouse_right_click = close_all
     frame_width = 1
     separator_color = frame
-    timeout = 10
+    timeout = 5
 
 [urgency_low]
     background = "#282A36DD"
@@ -64,4 +64,4 @@
     background = "#282A36DD"
     foreground = "#FF5555"
     frame_color = "#FF5555"
-    timeout = 0
+    timeout = 5
