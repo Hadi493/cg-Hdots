@@ -32,7 +32,7 @@ create_menu() {
     fi
     
     local counter=1
-    while IFS= read -r line && [ $counter -le 20 ]; do
+    while IFS= read -r line && [ $counter -le 10000 ]; do
         # Skip empty lines
         [ -z "$line" ] && continue
         
@@ -61,7 +61,7 @@ selected=$(echo "$menu_content" | rofi -dmenu -i \
     -p "Clipboard" \
     -theme ~/.config/rofi/config.rasi \
     -theme-str 'window { width: 700px; }' \
-    -theme-str 'listview { lines: 12; }')
+    -theme-str 'listview { lines: 10; }')
 
 # Copy selected entry
 if [ -n "$selected" ]; then
