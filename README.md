@@ -2,6 +2,8 @@
 
 A comprehensive collection of configuration files for a clean, productive Linux desktop environment.
 
+![Fish Shell Prompt](screenshot.png)
+
 ## Features
 
 - **Multi-WM Support**: Hyprland, Sway, and i3 configurations
