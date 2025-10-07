@@ -1,11 +1,11 @@
 clear
 fastfetch
 
+export HELIX_RUNTIME=$HOME/.config/helix/runtime
 # exports
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=kvantum
-
-
+export GEMINI_API_KEY=AIzaSyCsMrq7W-TWKWwd9R6Hqy4O8xFyYEeUR_A
 # ===============================================
 # FISH SHELL ENHANCED CONFIGURATION
 # ===============================================
@@ -19,7 +19,7 @@ set -g fish_greeting ''
 
 # Enable syntax highlighting (enabled by default but ensuring it's on)
 set -g fish_color_normal normal
-set -g fish_color_command 005fd7
+set -g fish_color_command 00ff87
 set -g fish_color_quote 999900
 set -g fish_color_redirection 00afff
 set -g fish_color_end 009900
@@ -191,11 +191,14 @@ alias dsk="dysk --all"
 alias cl="c ;; ll"
 
 # configs
-alias fconf="v ~/.config/fish/config.fish"
-alias hyprconf="v ~/.config/hypr/hyprland.conf"
-alias whconf="v ~/.config/hypr/scripts/wallpaper_changer.sh"
-alias cdwm="v ~/cg-dwm/config.h"
+alias fconf="hx ~/.config/fish/config.fish"
+alias hyprconf="hx ~/.config/hypr/hyprland.conf"
+alias whconf="hx ~/.config/hypr/scripts/wallpaper_changer.sh"
+alias cdwm="hx ~/cg-dwm/config.h"
 alias mdwm="cd ~/cg-dwm; sudo make clean install; cd -"
+
+# ada
+alias ada_init="~/.config/scripts/ada_init"
 
 # glow
 alias glow="~/programming/glow/glow"
@@ -225,6 +228,9 @@ alias et="emacs -nw"
 alias em="~/.config/emacs/bin/doom run"
 alias doom="~/.config/emacs/bin/doom"
 alias v="vim"
+
+# poetry
+alias p="hx ~/Documents/poetry/poetry.md"
 
 # Git aliases
 alias g="git"
@@ -348,6 +354,7 @@ function fish_prompt
     end
 
     echo
+    set_color 00ffaf
     echo -n "╰─"
     set_color 00ffaf
     echo -n " ❯❯ "
