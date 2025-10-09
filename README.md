@@ -2,8 +2,9 @@
 
 A comprehensive collection of configuration files for a clean, productive Linux desktop environment.
 
-![Fish Shell Prompt](screenshot.png)
-![Fish Shell Prompt](apps_menu.png)
+![Fish Shell Prompt](./screenshots/terminal_1.png)
+![Fish Shell Prompt](./screenshots/terminal_2.png)
+![Apps Menu](./screenshots/apps_menu.png)
 
 ## Features
 
