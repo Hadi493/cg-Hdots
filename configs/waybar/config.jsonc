@@ -3,7 +3,6 @@
     "position": "top",
     "height": 30,
     "output": "eDP-1",
-    // "output": "DP-2",
     "spacing": 1,
     "margin": 0,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],

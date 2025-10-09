@@ -30,8 +30,8 @@ current_alpha=$(cat "$STATE_FILE" 2>/dev/null || echo "1.0")
 
 # Decide new alpha (toggle 1.0 <-> 0.88)
 if awk "BEGIN {exit !($current_alpha >= 0.99)}"; then
-  new_alpha=0.88
-  msg="Set to transparent (77%)"
+  new_alpha=0.80
+  msg="Set to transparent (80%)"
 else
   new_alpha=1.0
   msg="Set to fully opaque (100%)"
