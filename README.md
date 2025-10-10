@@ -7,7 +7,9 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 ![Apps Menu](./screenshots/apps_menu.png)
 
 ---
+
 [Hyprland CG Manual](./cg-man.md)
+
 ---
 
 ## Features
