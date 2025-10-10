@@ -6,6 +6,9 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 ![Fish Shell Prompt](./screenshots/terminal_2.png)
 ![Apps Menu](./screenshots/apps_menu.png)
 
+## Check:
+[Hyprland CG Manual](./cg-man.md)
+
 ## Features
 
 - **Multi-WM Support**: Hyprland, Sway, and i3 configurations
