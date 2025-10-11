@@ -90,24 +90,24 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 5px 10px;
+    padding: 6px 8px;
     background-color: transparent;
     color: #89B4FA;
-    margin: 0 2px;
+    margin: 1px 5px;
     border-radius: 0px;
     transition: all 0.3s ease-in-out;
 }
-/**/
-/* #workspaces button:hover { */
-/*     background: @background-light; */
-/*     color: @workspaces-focused-fg; */
-/*     border: 2px solid @workspaces-focused-fg; */
-/* } */
+#workspaces button:hover {
+    background-color: @background-light;
+    color: @cyan;
+    border-radius: 99px;
+}
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: #89B4FA;
-    color: @black;
+    background-color: @blue;
+    color: @background;
+    border-radius: 99%;
     font-weight: bold;
 }
 
@@ -142,8 +142,8 @@ window#waybar {
 #memory:hover, #temperature:hover, #battery:hover, #network:hover, #pulseaudio:hover,
 #backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-quote:hover,
 #custom-language:hover, #idle_inhibitor:hover {
-    background-color: rgba(137, 180, 250, 0.3);
-    box-shadow: inset 0 0 0 1px rgba(137, 180, 250, 0.5);
+    background-color: @background-light;
+    border-color: @blue;
 }
 
 /* Module-specific colors */
@@ -213,6 +213,6 @@ window#waybar {
 }
 
 #custom-language:hover {
-    background-color: rgba(137, 180, 250, 0.3);
+    background-color: @background-light;
     color: @cyan;
 }
