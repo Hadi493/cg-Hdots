@@ -5,7 +5,7 @@
     "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/playerctl"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "network", "tray"],
 
@@ -47,7 +47,9 @@
         "max-length": 40,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl next"
+        "on-click-right": "playerctl stop",
+        "on-scroll-up": "playerctl volume 0.05+",
+        "on-scroll-down": "playerctl volume 0.05-"
     },
 
     "custom/weather": {
