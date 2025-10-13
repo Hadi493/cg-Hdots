@@ -5,6 +5,8 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 ![Fish Shell Prompt](./screenshots/terminal_1.png)
 ![Fish Shell Prompt](./screenshots/terminal_2.png)
 ![Apps Menu](./screenshots/apps_menu.png)
+![Apps Menu](./screenshots/quick_settings-1.png)
+![Apps Menu](./screenshots/quick_settings-2.png)
 ![Wallpaper Changer](./screenshots/wallpaper_selection.png)
 ![Window](./screenshots/window.png)
 ![Waybar](./configs/waybar/cg-waybar.png)
