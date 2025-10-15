@@ -5,9 +5,9 @@
     "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/playerctl"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/weather", "custom/playerctl", "tray"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "network", "tray"],
+    "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "network"],
 
 
     "hyprland/workspaces": {
@@ -36,9 +36,9 @@
     },
 
     "hyprland/window": {
-        "format": "{class}",
-        "max-length": 20,
-        "tooltip-format": "{title}"
+        "format": "{title}",
+        "max-length": 15,
+        "tooltip-format": "{class} - {title}"
     },
 
     "custom/playerctl": {
