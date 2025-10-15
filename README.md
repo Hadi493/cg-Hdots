@@ -1,4 +1,4 @@
-# Minimalist Linux Dotfiles
+# Minimalist Starter Arch Linux(Hyprland) Dotfiles
 
 A comprehensive collection of configuration files for a clean, productive Linux desktop environment.
 
@@ -25,11 +25,6 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 
 ## Included Configurations
 
-### Window Managers
-- **Hyprland** - Modern Wayland compositor with animations
-- **Sway** - i3-compatible Wayland compositor  
-- **i3** - Lightweight X11 window manager
-
 ### Applications
 - **Fish Shell** - Enhanced prompt with git integration and performance timing
 - **Helix** - Modern text editor configuration
@@ -39,20 +34,17 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 
 ### System UI
 - **Waybar** - Wayland status bar
-- **Polybar** - X11 status bar  
 - **Rofi** - Application launcher and window switcher
 - **Dunst/Mako** - Notification daemons
 
 ## Installation
 
-### Quick Install
 ```bash
-git clone https://github.com/Hadi493/cg-Hdots.git
-cd cg-Hdots
-./install.sh
+git clone https://github.com/Hadi493/dotfiles
+cd dotfiles
 ```
+`copy configs to your config dir`
 
-### Manual Install
 1. Clone the repository
 2. Copy desired configs to `~/.config/`
 3. Install required dependencies
@@ -66,13 +58,10 @@ cd cg-Hdots
 - A Nerd Font (recommended: Iosevka)
 
 ### Window Manager Specific
-**Hyprland/Sway:**
+**Hyprland:**
 - waybar, rofi, dunst/mako
 - wl-clipboard, swww, hyprshot
 
-**i3:**
-- polybar, rofi, dunst
-- feh, scrot/flameshot
 
 ### Applications
 - helix, neovim, kitty
