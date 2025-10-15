@@ -5,7 +5,7 @@ export HELIX_RUNTIME=$HOME/.config/helix/runtime
 # exports
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=kvantum
-export GEMINI_API_KEY=AIzaSyCsMrq7W-TWKWwd9R6Hqy4O8xFyYEeUR_A
+export GEMINI_API_KEY=AIzaSyCaCBXJQk5S_FzI4XbhIi_OCOEGRSlfI8Y
 # ===============================================
 # FISH SHELL ENHANCED CONFIGURATION
 # ===============================================
@@ -178,23 +178,26 @@ set -gx PATH $HOME/.local/bin $PATH
 # Basic file operations
 alias ll="ls -la"
 alias la="ls -a"
-alias l="ls -CF"
+alias l="ll | cat --language asm "
 alias cls="clear"
 alias c="clear"
 alias toc="touch"
-alias md="mkdir -pv" # Create parent directories and be verbose
-alias cp="cp -i" # Interactive copy
-alias mv="mv -i" # Interactive move
-alias rm="rm -i" # Interactive remove
+alias md="mkdir -pv" 
+alias cp="cp -i" 
+alias mv="mv -i" 
+alias rm="rm -i" 
 alias cat="bat"
 alias dsk="dysk --all"
 alias cl="c ;; ll"
 
+#play 
+alias playurl="~/.config/waybar/scripts/play-song.sh"
+
 # configs
-alias fconf="hx ~/.config/fish/config.fish"
-alias hyprconf="hx ~/.config/hypr/hyprland.conf"
-alias whconf="hx ~/.config/hypr/scripts/wallpaper_changer.sh"
-alias cdwm="hx ~/cg-dwm/config.h"
+alias fconf="nv ~/.config/fish/config.fish"
+alias hyprconf="nv ~/.config/hypr/hyprland.conf"
+alias whconf="nv ~/.config/hypr/scripts/wallpaper_changer.sh"
+alias cdwm="nv ~/cg-dwm/config.h"
 alias mdwm="cd ~/cg-dwm; sudo make clean install; cd -"
 
 # ada
@@ -204,7 +207,7 @@ alias ada_init="~/.config/scripts/ada_init"
 alias glow="~/programming/glow/glow"
 
 # Logout from i3
-alias logout="i3-msg exit"
+alias logout="hyprctl dispatch exit"
 
 # Restart i3 (without logging out)
 alias i3-restart="i3-msg restart"
@@ -230,7 +233,9 @@ alias doom="~/.config/emacs/bin/doom"
 alias v="vim"
 
 # poetry
-alias p="hx ~/Documents/poetry/poetry.md"
+alias pv="v ~/Documents/poetry/poetry.md"
+alias pnv="nv ~/Documents/poetry/poetry.md"
+alias ph="hx ~/Documents/poetry/poetry.md"
 
 # Git aliases
 alias g="git"
@@ -274,7 +279,7 @@ alias chgrp="chgrp --preserve-root"
 alias set-wallpaper="feh --bg-fill"
 
 alias pacman="sudo pacman"
-alias pi="sudo pacman -S"
+alias pacman="sudo pacman -S"
 
 alias sys-upgrade='sudo timeshift --create --comments "Before Upgrade" --tags D && sudo pacman -Syu'
 
@@ -383,30 +388,30 @@ end
 function fish_title
     echo (status current-command) " " (prompt_pwd)
 end
-set -gx PATH ~/.config/emacs/bin $PATH
+# set -gx PATH ~/.config/emacs/bin $PATH
 
 # Key bindings
 # Ctrl+E to launch Emacs
-bind \ce 'emacs &; commandline -f repaint'
+# bind \ce 'emacs &; commandline -f repaint'
 
 # Additional convenience bindings
 # Ctrl+Alt+E to launch Emacs in terminal mode
-bind \e\ce 'emacs -nw; commandline -f repaint'
+# bind \e\ce 'emacs -nw; commandline -f repaint'
 
 # Function to launch Emacs with file if specified
-function launch_emacs
-    set -l current_line (commandline)
-    if test -n "$current_line"
-        # If there's text on command line, treat it as filename
-        emacs $current_line &
-        commandline ''
-    else
-        # Otherwise just launch Emacs
-        emacs &
-    end
-    commandline -f repaint
-end
+# function launch_emacs
+#     set -l current_line (commandline)
+#     if test -n "$current_line"
+#         # If there's text on command line, treat it as filename
+#         emacs $current_line &
+#         commandline ''
+#     else
+#         # Otherwise just launch Emacs
+#         emacs &
+#     end
+#     commandline -f repaint
+# end
 
 # Bind Ctrl+Shift+E to launch Emacs with current command line as filename
-bind \e\[69\;6u launch_emacs
-set -gx PATH /home/cg/.deno/bin $PATH
+# bind \e\[69\;6u launch_emacs
+# set -gx PATH /home/cg/.deno/bin $PATH
