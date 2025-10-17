@@ -51,7 +51,9 @@ A comprehensive collection of configuration files for a clean, productive Linux 
 ```bash
 git clone https://github.com/Hadi493/cg-Hdots.git
 cd cg-Hdots
-./install.sh
+
+# for arch user:
+git switch archlinux
 ```
 
 ### Manual Install
