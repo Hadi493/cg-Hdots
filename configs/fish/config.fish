@@ -5,7 +5,6 @@ export HELIX_RUNTIME=$HOME/.config/helix/runtime
 # exports
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=kvantum
-export GEMINI_API_KEY=AIzaSyCsMrq7W-TWKWwd9R6Hqy4O8xFyYEeUR_A
 # ===============================================
 # FISH SHELL ENHANCED CONFIGURATION
 # ===============================================
