@@ -5,7 +5,6 @@ export HELIX_RUNTIME=$HOME/.config/helix/runtime
 # exports
 export QT_QPA_PLATFORMTHEME=qt5ct
 export QT_STYLE_OVERRIDE=kvantum
-export GEMINI_API_KEY=AIzaSyCaCBXJQk5S_FzI4XbhIi_OCOEGRSlfI8Y
 # ===============================================
 # FISH SHELL ENHANCED CONFIGURATION
 # ===============================================
@@ -182,10 +181,10 @@ alias l="ll | cat --language asm "
 alias cls="clear"
 alias c="clear"
 alias toc="touch"
-alias md="mkdir -pv" 
-alias cp="cp -i" 
-alias mv="mv -i" 
-alias rm="rm -i" 
+alias md="mkdir -pv"
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
 alias cat="bat"
 alias dsk="dysk --all"
 alias cl="c ;; ll"
